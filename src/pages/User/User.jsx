@@ -5,6 +5,7 @@ import getUserData from "../../services/getUserData";
 import UserDescription from "../../components/UserDescription/UserDescription";
 import getPosts from "../../services/getPosts";
 import getUsersAlbums from "../../services/getUserAlbums";
+import { Helmet } from "react-helmet";
 
 const User = () => {
   const { userId } = useParams();
@@ -22,7 +23,9 @@ const User = () => {
 
       getPosts().then((data) => {
         if (data) {
-          const handledData = data.filter((item) => item.userId === Number(userId));
+          const handledData = data.filter(
+            (item) => item.userId === Number(userId),
+          );
           setUsersPosts(handledData);
         }
       });
@@ -35,14 +38,27 @@ const User = () => {
   }, [userId]);
 
   return (
-    <section className="user">
-      <nav className="user__nav container">
-        <Link className="back-btn" to="/">
-          Back to list with users
-        </Link>
-      </nav>
-      <UserDescription {...userData} posts={usersPosts} albums={usersAlbums} />
-    </section>
+    <>
+      <Helmet>
+        <title>User: {userData?.name || ""}</title>
+        <meta
+          name="description"
+          content={"Info about next user:" + userData?.name || ""}
+        />
+      </Helmet>
+      <section className="user">
+        <nav className="user__nav container">
+          <Link className="back-btn" to="/">
+            Back to list with users
+          </Link>
+        </nav>
+        <UserDescription
+          {...userData}
+          posts={usersPosts}
+          albums={usersAlbums}
+        />
+      </section>
+    </>
   );
 };
 
