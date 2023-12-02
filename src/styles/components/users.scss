@@ -24,7 +24,21 @@
 
     &--heading {
       font-weight: bold;
+      display: flex;
+      gap: toRem(10);
     }
+  }
+
+  &__row-cell-sort {
+    width: toRem(30);
+    height: toRem(30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: $green;
+    color: $white;
+    border: 0;
   }
 
   &__list-empty {
