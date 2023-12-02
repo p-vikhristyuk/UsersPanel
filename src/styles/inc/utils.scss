@@ -1,0 +1,6 @@
+@use "sass:math";
+
+@function toRem($value) {
+  $remValue: math.div($value, 18);
+  @return $remValue + rem;
+}

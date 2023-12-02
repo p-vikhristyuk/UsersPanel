@@ -1,0 +1,12 @@
+.footer {
+  background: $primary;
+  color: $white;
+  padding: toRem(24);
+
+  &__copyright {
+    text-align: center;
+    font-size: toRem(16);
+    font-weight: 600;
+    letter-spacing: toRem(1);
+  }
+}

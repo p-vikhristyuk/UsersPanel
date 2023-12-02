@@ -1,0 +1,17 @@
+.search {
+  margin-bottom: toRem(24);
+
+  &__input {
+    padding: toRem(12);
+    width: toRem(450);
+    border: toRem(1) solid rgba($onyx, 0.3);
+    transition: border 0.15s linear;
+    font: inherit;
+    color: $onyx;
+
+    &:focus {
+      border-color: rgba($onyx, 1);
+      outline: none;
+    }
+  }
+}

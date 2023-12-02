@@ -1,0 +1,60 @@
+body {
+  font: 400 toRem(18)/toRem(27) $open-sans, Arial, Helvetica, sans-serif;
+  color: $primary;
+  background: $cream;
+}
+
+.container {
+  width: toRem(1440);
+  max-width: calc(100% - toRem(24));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font: 600 toRem(40)/1.5 $montserrat;
+  margin: 0 0 toRem(16);
+
+  &--02 {
+    font-size: toRem(32);
+  }
+}
+
+.content-box {
+  padding: toRem(24);
+  box-shadow: toRem(4) toRem(4) toRem(30) rgba($night, 0.2);
+  background: $white;
+  margin-bottom: toRem(24);
+  border-radius: toRem(12);
+}
+
+a {
+  color: $night;
+  text-decoration: none;
+  transition: color 0.15s linear;
+
+  &.blue {
+    color: $light-blue;
+
+    &:hover {
+      color: $night;
+    }
+  }
+
+  &:hover {
+    color: $light-blue;
+  }
+}
+
+.back-btn {
+  font-weight: bold;
+  font-size: toRem(16);
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}

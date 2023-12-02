@@ -1,0 +1,35 @@
+.users {
+  &__list {
+    border: toRem(1) solid rgba($onyx, 0.3);
+  }
+
+  &__row {
+    display: flex;
+
+    &:nth-child(2n) {
+      background: rgba($sage, 0.2);
+    }
+  }
+
+  &__row-cell {
+    width: 16.66%;
+    padding: toRem(12) toRem(24);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &:not(:first-child) {
+      border-left: toRem(1) solid rgba($onyx, 0.3);
+    }
+
+    &--heading {
+      font-weight: bold;
+    }
+  }
+
+  &__list-empty {
+    padding: toRem(24);
+    text-align: center;
+    border-top: toRem(1) solid rgba($onyx, 0.3);
+  }
+}

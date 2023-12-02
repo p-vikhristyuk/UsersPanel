@@ -1,0 +1,12 @@
+.header {
+  background: $primary;
+  padding: toRem(24);
+
+  &__logo {
+    color: $white;
+    font-size: toRem(30);
+    font-style: italic;
+    font-weight: 600;
+    font-family: $roboto;
+  }
+}

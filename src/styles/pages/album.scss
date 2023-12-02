@@ -1,0 +1,15 @@
+.album {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: toRem(12);
+  }
+
+  &__photo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+}

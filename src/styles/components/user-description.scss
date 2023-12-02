@@ -1,0 +1,16 @@
+.user-description {
+  &__holder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(16);
+
+    .description-list {
+      display: flex;
+      flex-direction: column;
+
+      .content-box {
+        flex: 1;
+      }
+    }
+  }
+}

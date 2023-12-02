@@ -1,0 +1,13 @@
+.description-list {
+  &__row {
+    display: flex;
+    padding: toRem(12) 0;
+  }
+
+  &__row-heading {
+    font-weight: bold;
+    width: toRem(300);
+    padding-right: toRem(24);
+    text-align: right;
+  }
+}
